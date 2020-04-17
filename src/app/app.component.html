@@ -1,0 +1,28 @@
+<input #InputFullName type="text"[(ngModel)]='fullname'>
+<input #InputInitial type="text" [(ngModel)]='initial'>
+<br>
+<br>
+<div class="options">
+    <input type="radio" name="RadioSelector" (click)="createSignature('screen1')"> 
+        <span style="font-family: Arial;" id='screen1' #screen1>
+            <span>{{fullname}}</span> &nbsp; &nbsp; &nbsp; 
+            <span>{{initial}}</span>
+        </span>
+    <br>
+    <input type="radio" name="RadioSelector" (click)="createSignature('screen2')">
+        <span style="font-family: 'Times New Roman'" id='screen2' #screen2>
+            <span>{{fullname}}</span> &nbsp; &nbsp; &nbsp;
+            <span>{{initial}}</span>
+        </span>
+    <br>
+    <input type="radio" name="RadioSelector" (click)="createSignature('screen3')"> 
+    <span style="font-family:'Comic Sans MS'" id='screen3' #screen3>
+        <span>{{fullname}}</span> &nbsp; &nbsp; &nbsp;
+        <span>{{initial}}</span>
+    </span>
+</div>
+
+<button (click)="createLink()">Download</button>
+<br>
+<img #canvas>
+<a #downloadLink></a> 
