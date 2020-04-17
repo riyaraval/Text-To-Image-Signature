@@ -1,5 +1,5 @@
-<input #InputFullName type="text"[(ngModel)]='fullname'>
-<input #InputInitial type="text" [(ngModel)]='initial'>
+Full Name:<input type="text"[(ngModel)]='fullname'>
+Initial:<input type="text" [(ngModel)]='initial'>
 <br>
 <br>
 <div class="options">
@@ -16,7 +16,7 @@
         </span>
     <br>
     <input type="radio" name="RadioSelector" (click)="createSignature('screen3')"> 
-    <span style="font-family:'Comic Sans MS'" id='screen3' #screen3>
+    <span style="font-family:Lobster" id='screen3' #screen3>
         <span>{{fullname}}</span> &nbsp; &nbsp; &nbsp;
         <span>{{initial}}</span>
     </span>

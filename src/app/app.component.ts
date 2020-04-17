@@ -8,10 +8,9 @@ import * as html2canvas from 'html2canvas';
 })
 export class AppComponent {
   title = 'TextToSignature';
-  // screen;
 
-  @Input() fullname:string ='Riya Raval';
-  @Input() initial:string = 'RR';
+  @Input() fullname:string ='Your Name';
+  @Input() initial:string = 'YN';
 
   selectedScreen:ElementRef;
   @ViewChild('screen1',{static:false}) screen1: ElementRef;
@@ -46,9 +45,7 @@ export class AppComponent {
 
   createLink(){
     html2canvas(this.selectedScreen.nativeElement).then(canvas => {
-      // this.canvas.nativeElement.src = canvas.toDataURL();
       this.downloadLink.nativeElement.href = canvas.toDataURL('image/png;base64');
-      console.log(canvas.toDataURL());
       this.downloadLink.nativeElement.download = 'Signature.png';
       this.downloadLink.nativeElement.click();
     });
